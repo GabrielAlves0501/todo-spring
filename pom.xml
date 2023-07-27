@@ -16,9 +16,9 @@
 	<properties>
 		<java.version>11</java.version>
 
-		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.organization>gabrielalves0501</sonar.organization>
 		<sonar.projectKey>GabrielAlves0501_todo-spring</sonar.projectKey>
+		<sonar.jacoco.xmlReportPaths>${project.build}/site/jacoco/jacoco.xml</sonar.jacoco.xmlReportPaths>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.7</version>
+			<version>0.8.10</version>
 		</dependency>
 	</dependencies>
 
@@ -56,7 +56,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.7</version>
+				<version>0.8.10</version>
 				<executions>
 					<execution>
 						<id>prepare-agent</id>
