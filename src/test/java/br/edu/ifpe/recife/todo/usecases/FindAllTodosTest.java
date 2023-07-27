@@ -51,7 +51,7 @@ public class FindAllTodosTest {
     void shouldFormatTodo() {
         Todo todo = Todo
             .builder()
-            .withText("Text")
+            .withText("Test text")
             .withDueDate(LocalDate.now().plusDays(10))
             .build();
 
