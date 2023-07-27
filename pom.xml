@@ -16,9 +16,9 @@
 	<properties>
 		<java.version>11</java.version>
 
-		<sonar.host.url>
-			https://sonarcloud.io
-		</sonar.host.url>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.organization>gabrielalves0501</sonar.organization>
+		<sonar.projectKey>GabrielAlves0501_todo-spring</sonar.projectKey>
 	</properties>
 	<dependencies>
 		<dependency>
