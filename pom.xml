@@ -15,10 +15,6 @@
 	<description>Spring Boot project for a todolist</description>
 	<properties>
 		<java.version>11</java.version>
-		<sonar.coverage.jacoco.xmlReportPaths>
-			${project.basedir}/report-aggregate/target/site/
-			jacoco-aggregate/jacoco.xml
-		</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -43,7 +39,7 @@
 		<dependency>
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.10</version>
+			<version>0.8.7</version>
 		</dependency>
 	</dependencies>
 
@@ -56,7 +52,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.10</version>
+				<version>0.8.7</version>
 				<executions>
 					<execution>
 						<id>prepare-agent</id>
