@@ -15,10 +15,8 @@
 	<description>Spring Boot project for a todolist</description>
 	<properties>
 		<java.version>11</java.version>
-
 		<sonar.organization>gabrielalves0501</sonar.organization>
-		<sonar.projectKey>GabrielAlves0501_todo-spring</sonar.projectKey>
-		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
