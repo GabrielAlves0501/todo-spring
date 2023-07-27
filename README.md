@@ -1,7 +1,9 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=GabrielAlves0501_todo-spring&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=GabrielAlves0501_todo-spring)
+
 # Todo REST service
 
 This project was made using Spring Boot. We used H2 in memory database, 
-as this project is used only to demonstrate de use of sonar cloud 
+as this project is used only to demonstrate de use of SonarCloud.
 
 We have two endpoints here:
 
