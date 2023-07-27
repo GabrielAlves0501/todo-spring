@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
-import java.util.Objects;
 
 @Entity
 public class Todo {
@@ -38,16 +37,6 @@ public class Todo {
         return new TodoBuilder();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Todo todo = (Todo) o;
-
-        return Objects.equals(id, todo.id);
-    }
-
     public static class TodoBuilder {
         private String text;
         private LocalDate dueDate;
@@ -60,7 +49,6 @@ public class Todo {
             this.dueDate = dueDate;
             return this;
         }
-
         public Todo build() {
             return new Todo(text,  dueDate);
         }
