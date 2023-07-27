@@ -18,7 +18,7 @@
 
 		<sonar.organization>gabrielalves0501</sonar.organization>
 		<sonar.projectKey>GabrielAlves0501_todo-spring</sonar.projectKey>
-		<sonar.jacoco.xmlReportPaths>${project.build}/site/jacoco/jacoco.xml</sonar.jacoco.xmlReportPaths>
+		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 	<dependencies>
 		<dependency>
