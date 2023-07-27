@@ -15,10 +15,8 @@
 	<description>Spring Boot project for a todolist</description>
 	<properties>
 		<java.version>11</java.version>
-		<sonar.coverage.jacoco.xmlReportPaths>
-			${project.basedir}/report-aggregate/target/site/
-			jacoco-aggregate/jacoco.xml
-		</sonar.coverage.jacoco.xmlReportPaths>
+		<sonar.organization>gabrielalves0501</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -46,7 +44,39 @@
 			<version>0.8.10</version>
 		</dependency>
 	</dependencies>
-
+	<profiles>
+		<profile>
+			<id>coverage</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>0.8.7</version>
+						<executions>
+							<execution>
+								<id>prepare-agent</id>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>report</id>
+								<goals>
+									<goal>report</goal>
+								</goals>
+								<configuration>
+									<formats>
+										<format>XML</format>
+									</formats>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 	<build>
 		<plugins>
 			<plugin>
@@ -56,24 +86,13 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.10</version>
 				<executions>
 					<execution>
-						<id>prepare-agent</id>
+						<id>report-aggregate</id>
+						<phase>verify</phase>
 						<goals>
-							<goal>prepare-agent</goal>
+							<goal>report-aggregate</goal>
 						</goals>
-					</execution>
-					<execution>
-						<id>report</id>
-						<goals>
-							<goal>report</goal>
-						</goals>
-						<configuration>
-							<formats>
-								<format>XML</format>
-							</formats>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
