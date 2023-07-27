@@ -3,7 +3,7 @@
 # Todo REST service
 
 This project was made using Spring Boot. We used H2 in memory database, 
-as this project is used only to demonstrate de use of sonar cloud 
+as this project is used only to demonstrate de use of SonarCloud.
 
 We have two endpoints here:
 
