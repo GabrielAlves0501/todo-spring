@@ -15,8 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Jacoco Coverage
-        uses: actions/setup-java@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+      - name: Run jacoco report
         run:
           mvn verify
       - name: Analyze with SonarCloud
